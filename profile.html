@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>个人资料</title>
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="navbar">
+  <div class="left">
+    <a href="javascript:history.go(-1)">< 返回</a>
+  </div>
+  <div class="title">个人资料</div>
+</div>
+<div id="menubar">
+	<ul>
+		<li><a href="report.html">健康报告</a></li>
+	<li>
+	<a href="profile.html">个人资料</a>
+	</li>
+	</ul>
+</div>
+
+
+<div class="page-profile">
+	<form>
+ 	<ul>
+	 	<li>
+	 		<span class="title">我的头像</span>
+	 		<span class="input">
+	 			<img src="http://placehold.it/100x100" class="avatar"/>
+	 		</span>
+	 	</li>
+	 	<li>
+	 		<span class="title">我的昵称</span>
+	 		<span class="input">
+	 			<input type="text" placeholder="请输入昵称" value="包涵"></input>
+	 		</span>
+	 	</li>
+	 	<li>
+	 		<span class="title">会员等级</span>
+	 		<span class="input">
+	 			普通会员
+	 		</span>
+	 	</li>
+ 	</ul>
+ 	<ul>
+	 	<li>
+	 		<span class="title">姓 名</span>
+	 		<span class="input">
+	 			<input type="text" placeholder="请输入真实姓名" value="无名"></input>
+	 		</span>
+	 	</li>
+	 	<li>
+	 		<span class="title">性 别</span>
+	 		<span class="input">
+	 			<select>
+		 			<option>男</option>
+		 			<option>女</option>
+	 			</select>
+	 		</span>
+	 	</li>
+	 	<li>
+	 		<span class="title">出生日期</span>
+	 		<span class="input">
+	 			<input type="date" placeholder="" value=""></input>
+	 		</span>
+	 	</li>
+	 	<li>
+	 		<span class="title">身 份</span>
+	 		<span class="input">
+	 			<select>
+		 			<option>群众</option>
+		 			<option>党员</option>
+	 			</select>
+	 		</span>
+	 	</li>
+	 	<li>
+	 		<span class="title">民 族</span>
+	 		<span class="input">
+	 			<select>
+		 			<option>汉族</option>
+		 			<option>其它</option>
+	 			</select>
+	 		</span>
+	 	</li>
+	 	<li>
+	 		<span class="title">婚 姻</span>
+	 		<span class="input">
+	 			<select>
+		 			<option>未婚</option>
+		 			<option>其它</option>
+	 			</select>
+	 		</span>
+	 	</li>
+	 	<li>
+	 		<span class="title">现居城市</span>
+	 		<span class="input">
+	 			<select>
+		 			<option>无锡</option>
+		 			<option>其它</option>
+	 			</select>
+	 		</span>
+	 	</li>
+	 	<li>
+	 		<span class="title">住址</span>
+	 		<span class="input">
+	 			<textarea rows="1"></textarea>
+	 		</span>
+	 	</li>
+ 	</ul>
+ 	<button  type="submit">保存</button>
+	</form>
+</div>
+
+<!-- 判断微信，隐藏头部navbar -->
+<script src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+    if(isWeiXin()){
+        $('#navbar').remove();
+    }else{
+      $('body').css('height','auto');
+    }
+}
+function isWeiXin(){
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+        return true;
+    }else{
+        return false;
+    }
+}
+</script>
+</body>
+</html>

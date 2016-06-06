@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>健康银行</title>
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-welcome">
+  <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide slider-1">
+            <img src="img/logo.jpg" class="logo" />
+          </div>
+          <div class="swiper-slide slider-2">
+            <img src="img/slider-2.png" class="slider" />
+            <h3>用数据说话，让健康升值</h3>
+          </div>
+          <div class="swiper-slide slider-3">
+            <h3>WHO(1995)健康新地平线:<br/>以人为中心,以健康为中心,而不是以疾病为中心</h3>
+            <img src="img/slider-3.png" />
+          </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+  </div>
+  <div class="login-footer">
+    <a href="login.html">登 录</a>
+    <a href="signup.html">注 册</a>
+  </div>
+</div>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+   $(document).ready(function () {
+    //initialize swiper when document ready  
+    var mySwiper = new Swiper ('.swiper-container', {
+      // Optional parameters
+      pagination: '.swiper-pagination',
+      loop: true
+    })        
+  });
+</script>
+</body>
+</html>
